@@ -1,14 +1,17 @@
 <div align="center">
 
-# 🚀 DSH 增强插件集
+# 🚀 DSH 增强插件集 / DSH Plugins
 
 **DeepSeek Harness Web GUI 实用插件 —— 文件预览 + 辅助识图**
+*Utility plugins for DeepSeek Harness Web GUI — In-chat File Preview + Dual-Model Vision*
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-blue.svg)]()
 [![Plugins](https://img.shields.io/badge/plugins-2-orange.svg)]()
 [![Version](https://img.shields.io/badge/version-1.0.0-purple.svg)]()
 [![DSH](https://img.shields.io/badge/DeepSeek%20Harness-Web-red.svg)](https://github.com/deepseek-ai/deepseek-harness)
+
+**🌐 English → [README_EN.md](./README_EN.md)**
 
 </div>
 
