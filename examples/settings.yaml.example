@@ -1,0 +1,54 @@
+# 示例：~/.dsh/settings.yaml 中的视觉模型配置
+# 复制此文件内容到你的 settings.yaml，按需修改
+
+# 默认主模型（可改为你喜欢的）
+agent-default-model:
+  provider: deepseek-official
+  model: deepseek-v4-flash
+
+# llm-pi-ai 多提供商配置
+# 辅助识图模型通过 dsh-image-analyzer 插件调用（OpenAI 兼容接口）
+llm-pi-ai:
+  providers:
+    # 示例：Agnes（支持视觉）
+    agnes:
+      displayName: Agnes
+      apiKeyEnv: AGNES_API_KEY
+      api: openai-completions
+      baseURL: https://apihub.agnes-ai.com/v1
+      defaultContextWindow: 524288
+      defaultMaxTokens: 65536
+      defaultInput: [ text, image ]   # ← 声明支持图像输入
+      models:
+        - id: agnes-2.5-flash
+          name: Agnes 2.5 Flash
+          contextWindow: 524288
+          maxTokens: 65536
+
+    # 示例：OpenAI GPT-4o（支持视觉）
+    # openai:
+    #   displayName: OpenAI
+    #   apiKeyEnv: OPENAI_API_KEY
+    #   api: openai-completions
+    #   baseURL: https://api.openai.com/v1
+    #   defaultInput: [ text, image ]
+    #   models:
+    #     - id: gpt-4o
+    #       name: GPT-4o
+
+    # 示例：通义千问 VL（支持视觉）
+    # qwen:
+    #   displayName: 通义千问
+    #   apiKeyEnv: DASHSCOPE_API_KEY
+    #   api: openai-completions
+    #   baseURL: https://dashscope.aliyuncs.com/compatible-mode/v1
+    #   defaultInput: [ text, image ]
+    #   models:
+    #     - id: qwen-vl-max
+    #       name: Qwen VL Max
+
+# ── 凭证（~/.dsh/.credentials.yaml）──
+# DEEPSEEK_API_KEY: sk-xxx
+# AGNES_API_KEY: sk-xxx
+# OPENAI_API_KEY: sk-xxx
+# DASHSCOPE_API_KEY: sk-xxx

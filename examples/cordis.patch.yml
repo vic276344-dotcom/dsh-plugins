@@ -1,0 +1,11 @@
+# 示例：cordis.patch.yml 插件注册
+# 追加到你的 web profile 目录的 cordis.patch.yml
+
+- insert:
+    # 文件预览插件（host + client 双面）
+    - id: dsh-file-preview
+      name: 'dsh-file-preview'
+
+    # 辅助识图插件（host）
+    - id: dsh-image-analyzer
+      name: 'dsh-image-analyzer'

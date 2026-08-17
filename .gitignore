@@ -1,0 +1,11 @@
+# node_modules
+node_modules/
+*.log
+
+# DSH profile artifacts
+cordis.patch.yml.bak
+settings.yaml.bak
+
+# OS files
+.DS_Store
+Thumbs.db

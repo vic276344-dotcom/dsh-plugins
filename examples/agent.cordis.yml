@@ -1,0 +1,11 @@
+# 示例：preset 中注册 analyze_image 工具
+# 复制以下行到你的 agent preset 文件（如 ~/.dsh/.agent-presets/<preset>/agent.cordis.yml）
+
+# ── auxiliary vision model ──────────────────────────────────────────────
+- id: image-analyzer
+  name: 'dsh-image-analyzer'
+  # 可选：覆盖视觉模型配置
+  # config:
+  #   baseURL: https://api.openai.com/v1
+  #   model: gpt-4o
+  #   apiKeyEnv: OPENAI_API_KEY
